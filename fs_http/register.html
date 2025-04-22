@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: orangered;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        #dob {
+            width: 200px;
+            padding: 5px;
+        }
+
+        #fname {
+            width: 200px;
+            padding: 5px;
+        }
+
+        #lname {
+            width: 200px;
+            padding: 5px;
+        }
+
+        #email {
+            width: 200px;
+            padding: 5px;
+        }
+
+        #contact {
+            width: 200px;
+            padding: 5px;
+        }
+
+        label {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #submit {
+            background-color: navy;
+            color: white;
+            border-radius: 10px;
+            width: 200px;
+            padding: 10px;
+        }
+
+        #submit:hover {
+            background-color: orange;
+            cursor: pointer;
+        }
+
+        #state,
+        #city {
+            width: 200px;
+            padding: 5px;
+        }
+
+        #reset {
+            background-color: rgb(82, 31, 140);
+            color: white;
+            border-radius: 10px;
+            width: 200px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <form>
+        <table border="1" cellpadding="10px">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="fname">Enter First Name :</label>
+                    </td>
+                    <td>
+                        <input type="text" placeholder="Enter First Name" id="fname" name="first_name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="lname">Enter Last Name :</label>
+                    </td>
+                    <td>
+                        <input type="text" id="lname" name="last_name" placeholder="Enter Last Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="dob">Enter Date of Birth :</label>
+                    </td>
+                    <td>
+                        <input type="date" id="dob" name="dob" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Enter Email :</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gender">Select Gender -</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="male" name="gender" required value="male">
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" required value="male">
+                        <label for="female">Female</label>
+
+                        <input type="radio" id="other" name="gender" required value="other">
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="state">Select State -</label>
+                    </td>
+                    <td>
+                        <select id="state" name="state" required>
+                            <option value="">Choose One Option</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Goa" selected>Goa</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="city">Select City</label>
+                    </td>
+                    <td>
+                        <select id="city" name="city" required>
+                            <option value="">Select One City</option>
+                            <optgroup label="Maharashtra">
+                                <option value="Pune">Pune</option>
+                                <option value="Nagpur">Nagpur</option>
+                                <option value="Mumbai">Mumbai</option>
+                            </optgroup>
+                            <optgroup label="Uttarakhand">
+                                <option value="Kedarnath">Kedarnath</option>
+                                <option value="Badrinath">Badrinath</option>
+                                <option value="Rushikesh">Rushikesh</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <label for="address">Enter Address -</label>
+                    </td>
+                    <td>
+                        <textarea id="address" name="address"
+                            placeholder="Ex. Flat No. xxx, Wing no. xxx, Society Name, area name" rows="5"
+                            cols="26"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <label>Select Course -</label>
+                    </td>
+                    <td>
+
+                        <input type="checkbox" id="js" checked disabled value="javascript">
+                        <label for="js">JavaScript</label>
+                        <br>
+
+                        <input type="checkbox" id="react" name="courses" value="reactjs">
+                        <label for="react">ReactJS</label>
+                        <br>
+
+                        <input type="checkbox" id="ang" name="courses" value="angular">
+                        <label for="ang">Angular</label>
+                        <Br>
+
+                        <input type="checkbox" id="bst" name="courses" checked value="bootstrap">
+                        <label for="bst">Bootstrap</label>
+                        <Br>
+
+                        <input type="checkbox" id="ui" name="courses" checked disabled value="HTML,CSS">
+                        <label for="ui">HTML, CSS</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="contact">Enter Contact -</label>
+                    </td>
+                    <td>
+                        <input type="tel" name="contact" id="contact" placeholder="Enter Contact" required
+                            pattern="[789]{1}[0-9]{9}">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Register" id="submit">
+                        <input type="reset" value="Clear Filed" id="reset">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+        <!-- id - multipurpose (label and input connected, css, javascript dynamic changes) -->
+
+        <!-- <input type="time">
+        <input type="datetime-local">
+        <input type="month">
+        <input type="week">
+        <input type="color">
+        <input type="search">
+        <input type="range"> -->
+
+
+    </form>
+</body>
+
+</html>
