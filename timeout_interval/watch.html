@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #showtime{
+            width: 300px;
+            height: 90px;
+            background-color: rgb(12, 12, 89);
+            border-radius: 20px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div id="showtime"></div>
+
+    <script>
+        const digitalWatch = () =>{
+            const date = new Date()
+            const time = date.toLocaleTimeString()
+            document.getElementById('showtime').innerHTML = time
+        }
+        setInterval(digitalWatch,1000)
+        
+        console.log(new Date().toLocaleTimeString())
+    </script>
+</body>
+</html>
